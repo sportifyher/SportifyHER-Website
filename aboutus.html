@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <title>About Us</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+     :root {
+    --dark-orange: #ca4a09;       /* Button color */
+    --light-orange: #ffa658;      /* Banner background */
+    --lighter-orange: #ffc080;    /* Navbar background */
+    --white: #FFFFFF;
+    --black: #1D1D1F;             /* Primary text */
+     }
+
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+    body {
+      color: var(--dark-orange);
+      background-color: var(--light-orange);
+    }
+
+
+        /* Header Styles */
+        header {
+            background-color:var(--light-orange);
+            position: fixed;
+            width: 100%;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color:var(--dark-orange);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 2rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color:var(--dark-orange);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color:var(--white)
+        }
+        
+        .contact-btn {
+            background-color: #D35400; /* Dark orange */
+            color: #FFD699 !important; /* Light orange text */
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px; /* Circular rounded */
+            transition: all 0.3s;
+            font-weight: bold;
+        }
+        
+        .contact-btn:hover {
+            background-color: #E67E22;
+            color: #FFD699 !important;
+        }
+        
+        /* Hero Section */
+
+    /* Hero */
+    .hero {
+      background: url('run.jpg.jpg.jpg') no-repeat center center/cover;
+      padding: 100px 20px;
+      text-align: center;
+      color:var(--dark-orange);
+      position: relative;
+    }
+.hero-btn {
+            background-color: transparent;
+            color: #D35400; /* Dark orange text */
+            border: 2px solid #D35400;
+            padding: 0.8rem 2rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 25px; /* Circular rounded */
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+        
+        .hero-btn:hover {
+            background-color: #D35400;
+            color: #FFD699; /* Light orange text on hover */
+        }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgba(20, 60, 40, 0.5);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .hero h1 {
+      font-size: 72px;
+      margin-bottom: 0px;
+    }
+
+    .hero p {
+      font-size: 25px;
+      margin-bottom: 30px;
+      margin-top: 0px;
+    }
+
+    .btn {
+      padding: 12px 25px;
+      background-color: var(--dark-orange);
+      color: var(--lighter-orange);
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    /* About */
+    
+
+    /* Updated About Section for Cards */
+.about-content.cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 40px;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.card {
+    flex: 1;
+  background-color: var(--light-orange);
+  border-radius: 10px;
+  padding: 30px;
+  width: 300px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+ 
+}
+
+.card h3 {
+  margin-bottom: 15px;
+  color: var(--dark-orange);
+}
+
+.card p {
+  line-height: 1.6;
+}
+
+
+    .about-text {
+      flex: 1;
+    }
+
+    .about-text h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .about-text p {
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+
+    .btn-secondary {
+      padding: 10px 20px;
+      background-color: #6f9d84;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    /* Psychotherapy */
+    .psychotherapy {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 40px;
+      gap: 40px;
+      background-color: #512c11;
+      flex-wrap: wrap;
+    }
+
+    .psychotherapy-text {
+      flex: 1;
+      min-width: 300px;
+      color: #FFD699;
+    }
+    .psychotherapy-text h3{
+        margin-bottom: 20px;
+        font-size: 30px;
+    }
+
+    .psychotherapy-image img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+     
+        /* Footer */
+        footer {
+            background-color: var(--dark-orange);
+            color: var(--lighter-orange);
+            padding: 3rem 2rem;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer-logo {
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        .footer-content p{
+            font-size: 20px;
+        }
+        
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .footer-links a {
+            color:var(--lighter-orange);
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s;
+            font-size: 18px;
+        }
+        .footer-links h3{
+            font-size: 25px;
+            margin-bottom: 20px;
+        }
+        .footer-links a:hover {
+            color: #E67E22;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .social-links a {
+            color: var(--lighter-orange);
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: #E67E22;
+        }
+        
+        .contact-info {
+            margin-top: 1rem;
+        }
+        .footer-content h3{
+            font-size: 25px;
+            margin-bottom: 20px;
+        }
+        
+        .contact-info p {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--dark-orange)
+        }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">SportifyHER</div>
+            <ul class="nav-links">
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="contactus.html" class="contact-btn">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>About Us</h1>
+      <p>Get To Know Us</p>
+      
+    </div>
+  </section>
+
+  <!-- About Section -->
+ <!-- About Section (Replaced with Cards) -->
+<section class="about">
+  <div class="about-content cards">
+    <div class="card">
+      <h3>Our Mission</h3>
+      <p>At SportifyHer, our mission is to empower girls and women in sports by breaking down barriers, providing critical funding, and creating equal opportunities for growth, visibility, and success. We’re here to make sure female athletes have the resources, support, and recognition they deserve</p>
+    </div>
+    <div class="card">
+      <h3>Our Vision</h3>
+      <p>We envision a world where women’s sports are fully valued, celebrated, and supported—where every girl, regardless of background, has the chance to lead, compete, and thrive. SportifyHer is building that future by shifting culture, driving equity, and elevating the next generation of game-changers
+
+</p>
+    </div>
+    <div class="card">
+      <h3>Our Team</h3>
+      <p>Behind SportifyHer is a passionate, purpose-driven team of athletes, advocates, creatives, and leaders—united by a belief in the power of sport to transform lives. Together, we’re reimagining what’s possible for women in sport and making that vision a reality</p>
+    </div>
+  </div>
+</section>
+
+  <!-- Individual Psychotherapy Section -->
+  <section class="psychotherapy">
+    <div class="psychotherapy-text">
+      <h3>What We Do</h3>
+      <p>SportifyHer funds and supports girls and women in sports by providing financial aid, resources, and visibility. We help athletes access what they need to train, compete, and succeed—while building a more equal and empowered future for women in sport through advocacy, storytelling, and community</p>
+      
+    </div>
+    
+  </section>
+
+  <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-about">
+                <div class="footer-logo">SportifyHER</div>
+                <p>Empowering Women Through Sports</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=61560366037346"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/sportifyher?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fab fa-instagram"></i></a>
+                    <a href="#sportifyher@gmail.com"><i class="fas fa-envelope"></i></a>
+                    <a href="+92 3272034848"><i class="fas fa-phone"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h3>Navigation</h3>
+                <a href="aboutus.html">About Us</a>
+                <a href="projects.html">Projects</a>
+                <a href="donate.html">Donate</a>
+                <a href="join.html">Join</a>
+                <a href="contactus.html">Contact Us</a>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Info</h3>
+                <div class="contact-info">
+                    <p><i class="fas fa-envelope"></i>sportifyher@gmail.com</p>
+                    <p><i class="fas fa-phone"></i>+92 327 203 4848</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Lahore, Pakistan</p>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 SportifyHER. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

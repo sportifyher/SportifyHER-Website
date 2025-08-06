@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <title>Join Us - SportifyHER</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+ 
+  <style>
+    :root {
+      --dark-orange: #ca4a09;
+      --orange: #e86c1d;
+      --light-orange: #ffa658;
+      --text-orange: #ffbe74;
+      --white: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: var(--white);
+      color: var(--text-orange);
+    }
+    /* Header Styles */
+        header {
+            background-color:var(--light-orange);
+            position: fixed;
+            width: 100%;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color:var(--dark-orange);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 2rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color:var(--dark-orange);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color:var(--white)
+        }
+        
+        .contact-btn {
+            background-color: #D35400; /* Dark orange */
+            color: #FFD699 !important; /* Light orange text */
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px; /* Circular rounded */
+            transition: all 0.3s;
+            font-weight: bold;
+        }
+        
+        .contact-btn:hover {
+            background-color: #E67E22;
+            color: #FFD699 !important;
+        }
+        
+
+    .join-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 80px 10%;
+      min-height: 100vh;
+      gap: 50px;
+    }
+
+    .join-text {
+      flex: 1;
+    }
+
+    .join-text h1 {
+      font-size: 48px;
+      color: var(--dark-orange);
+      margin-bottom: 20px;
+    }
+
+    .join-text p {
+      font-size: 18px;
+      margin-bottom: 30px;
+      color: var(--dark-orange);
+      max-width: 500px;
+    }
+
+    .join-text .join-btn {
+      background-color: var(--orange);
+      color: var(--white);
+      padding: 14px 28px;
+      border: none;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 16px;
+      cursor: pointer;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+    }
+
+    .join-text .join-btn:hover {
+      background-color: var(--dark-orange);
+    }
+
+    .join-image {
+      flex: 1;
+      text-align: center;
+    }
+
+    .join-image img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    @media (max-width: 900px) {
+      .join-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 5%;
+      }
+
+      .join-text h1 {
+        font-size: 36px;
+      }
+
+      .join-text p {
+        font-size: 16px;
+        color: var(--dark-orange);
+      }
+
+      .join-image {
+        margin-top: 40px;
+      }
+    }
+     /* Footer */
+        footer {
+            background-color: var(--dark-orange);
+            color: var(--lighter-orange);
+            padding: 3rem 2rem;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer-logo {
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        .footer-content p{
+            font-size: 20px;
+        }
+        
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .footer-links a {
+            color:var(--lighter-orange);
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s;
+            font-size: 18px;
+        }
+        .footer-links h3{
+            font-size: 25px;
+            margin-bottom: 20px;
+        }
+        .footer-links a:hover {
+            color: #E67E22;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .social-links a {
+            color: var(--lighter-orange);
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: #E67E22;
+        }
+        
+        .contact-info {
+            margin-top: 1rem;
+        }
+        .footer-content h3{
+            font-size: 25px;
+            margin-bottom: 20px;
+        }
+        
+        .contact-info p {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--dark-orange)
+        }
+  </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">SportifyHER</div>
+            <ul class="nav-links">
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="contactus.html" class="contact-btn">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+  <section class="join-container">
+    <div class="join-text">
+      <h1>Join our volunteer programme</h1>
+      <p>Become part of a powerful movement uplifting women in sports. Whether you’re a student, athlete, or ally — your energy and time can spark real change. Join us in shaping the future of female athletics.</p>
+      <a href="https://your-google-doc-link.com" class="join-btn" target="_blank">Apply Now</a>
+    </div>
+    <div class="join-image">
+      <img src="soo.jpeg.jpeg" alt="Join Illustration">
+    </div>
+  </section>
+<!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-about">
+                <div class="footer-logo">SportifyHER</div>
+                <p>Empowering Women Through Sports</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=61560366037346"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/sportifyher?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fab fa-instagram"></i></a>
+                    <a href="#sportifyher@gmail.com"><i class="fas fa-envelope"></i></a>
+                    <a href="+92 3272034848"><i class="fas fa-phone"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h3>Navigation</h3>
+                <a href="aboutus.html">About Us</a>
+                <a href="projects.html">Projects</a>
+                <a href="donate.html">Donate</a>
+                <a href="join.html">Join</a>
+                <a href="contactus.html">Contact Us</a>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Info</h3>
+                <div class="contact-info">
+                    <p><i class="fas fa-envelope"></i>sportifyher@gmail.com</p>
+                    <p><i class="fas fa-phone"></i>+92 327 203 4848</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Lahore, Pakistan</p>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 SportifyHER. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
